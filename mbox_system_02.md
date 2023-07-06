@@ -19,7 +19,7 @@ The Uber-Base station controls the system. Also provides a simple visualisation 
 
 #### Vision-Base
 
-Line of sight vision base, designed for capturing the April Tags, can work with wide angle cameras and the Owl Meeting Lab. Maybe also 360 like cameras.
+Line of sight vision base, designed for capturing the April Tags, can work with wide-angle cameras and the Owl Meeting Lab. Also 360 like cameras.
 | Tech         | Features                         |
 | ------------ | -------------------------------- |
 | Raspberry-Pi | Camera Wide angle or OWL meeting |
@@ -43,7 +43,7 @@ This simple base station handles the Audio tags or runs the Jabra for collecting
 
 #### Location-Base
 
-This base is designed to track location with BLE or RFID and provide proximity information. BLE logging to deterime via triangulation the badges close by. Or using RFID (medium power) to capture the badges near by.
+This base is designed to track location with BLE or RFID and provide proximity information. BLE logging to determine via triangulation the badges close by. Or using RFID (medium power) to capture the badges nearby.
 
 | Tech          | Features           |
 | ------------- | ------------------ |
@@ -67,7 +67,7 @@ This badge uses April Tags and Arduino Nicla Vision board to capture proximity l
 
 #### Voice-Badge Deluxe
 
-These badge uses April Tags and Arduino H7/Camera Module to stream audio data vibration data to the Voice-Base Deluxe so the base station can perform audio processing. 
+These badge uses April Tags and Arduino H7/Camera Module to stream audio data vibration data to the Voice-Base Deluxe, so the base station can perform audio processing. 
 
 | Tech                               | Features            |
 | ---------------------------------- | ------------------- |
@@ -77,7 +77,7 @@ These badge uses April Tags and Arduino H7/Camera Module to stream audio data vi
 
 #### Voice-Badge Simple
 
-These badge uses April Tags and Arduino Nicla Voice to capture audio data vibration data.
+These badge uses April Tags and Arduino Nicla Voice to capture audio data vibration data. Keyword and simple
 
 | Tech                               | Features            |
 | ---------------------------------- | ------------------- |
