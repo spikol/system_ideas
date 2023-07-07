@@ -24,6 +24,7 @@ Line of sight vision base, designed for capturing the April Tags, can work with 
 | Raspberry-Pi | Camera Wide angle or OWL meeting |
 |              | Wifi                             |
 |              | MQTT Broker/Client               |
+|              | InfluxDB Client                  |
 |              | Ethernet                         |
 
 #### *Audio-Base simple and deluxe*
@@ -37,7 +38,9 @@ The deluxe model captures the streams from the Voice-Badge deluxe and perform VA
 | Nvidia Jetson (deluxe) | RFID Hat           |
 | Unix Box (deluxe)      | BLE                |
 | Raspberry-Pi (simple)  | Wifi               |
-|                        |MQTT Broker/Client  |
+|                        | MQTT Broker/Client |
+|                        | InfluxDB Client    |
+|                        | MongoDB Client     |
 |                        | Jabra              |
 |                        | Ethernet           |
 
@@ -51,6 +54,7 @@ This base is designed to track location with BLE or RFID and provide proximity i
 | Arduino H7/H8 | BLE                |
 |               | Wifi               |
 |               | MQTT Broker/Client |
+|               | InfluxDB Client    |
 |               | Ethernet           |
 
 ### **Badges**
@@ -99,13 +103,13 @@ The plain badge with an April Tag and RFID badge.
 Influx DB stores some time series charactersistics (e.g. speakers by time, graph links by time)
 | Tech      | Features             |
 | --------- | -------------------- |
-| Linux box | Logging Storage      |
+| Linux box | InfluxDB server      |
 
 #### *Mongo DB*
 Mongo DB stores text charactersistics (e.g. text by speaker)
 | Tech      | Features             |
 | --------- | -------------------- |
-| Linux box | Text Storage         |
+| Linux box | MongoDB server       |
 
 ### **Other Devices (Inputs)**
 
