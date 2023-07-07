@@ -106,7 +106,7 @@ Influx DB stores some time series charactersistics (e.g. speakers by time, graph
 | Linux box | InfluxDB server      |
 
 #### *Mongo DB*
-Mongo DB stores text charactersistics (e.g. text by speaker)
+Mongo DB stores text charactersistics (e.g. transcription by speaker)
 | Tech      | Features             |
 | --------- | -------------------- |
 | Linux box | MongoDB server       |
