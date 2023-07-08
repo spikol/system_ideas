@@ -3,9 +3,10 @@
 ### **Bases**
 
 #### *Uber-Base (User base)*
-
-The Uber-Base station provides a simple visualisation of the conversational chracteristic by subscribing different topics from corresponding MQTT broker.
-Maybe could send feeback to instructor's uber-base.
++ Web page user interace, controls the system.
++ The Uber-Base will send request to dataserver and receive results from dataserver. 
++ The Uber-Base station provides a simple visualisation of the conversational chracteristic by subscribing different topics from corresponding MQTT broker.
++ Participants' user base could send feeback to instructor's uber-base.
 
 | Tech           | Features          |
 | -------------- | ----------------- |
@@ -23,7 +24,7 @@ Line of sight vision base, designed for capturing the April Tags, can work with 
 | ------------ | -------------------------------- |
 | Raspberry-Pi | Camera Wide angle or OWL meeting |
 |              | Wifi                             |
-|              | MQTT Broker/Client               |
+|              | MQTT Broker                      |
 |              | InfluxDB Client                  |
 |              | Ethernet                         |
 
@@ -38,7 +39,7 @@ The deluxe model captures the streams from the Voice-Badge deluxe and perform VA
 | Nvidia Jetson (deluxe) | RFID Hat           |
 | Unix Box (deluxe)      | BLE                |
 | Raspberry-Pi (simple)  | Wifi               |
-|                        | MQTT Broker/Client |
+|                        | MQTT Broker        |
 |                        | InfluxDB Client    |
 |                        | MongoDB Client     |
 |                        | Jabra              |
@@ -53,7 +54,7 @@ This base is designed to track location with BLE or RFID and provide proximity i
 | Raspberry-Pi  | RFID Shield / Hat  |
 | Arduino H7/H8 | BLE                |
 |               | Wifi               |
-|               | MQTT Broker/Client |
+|               | MQTT Broker        |
 |               | InfluxDB Client    |
 |               | Ethernet           |
 
@@ -66,8 +67,8 @@ This badge uses April Tags and Arduino Nicla Vision board to capture proximity l
 | Tech                 | Features            |
 | -------------------- | ------------------- |
 | Arduino Nicla Vision | Vision              |
-| April Tag            | MQTT Client         |
-| Battery              | Audio and Vibration |
+| April Tag            | Audio and Vibration |
+| Battery              |  |
 
 #### *Voice-Badge Deluxe*
 
@@ -76,8 +77,8 @@ These badge uses April Tags and Arduino H7/Camera Module to stream audio data vi
 | Tech                               | Features            |
 | ---------------------------------- | ------------------- |
 | Arduino Nicla Vision / H7 + Camera | Vision              |
-| April Tag                          | MQTT Client         |
-| Battery                            | Audio and Vibration |
+| April Tag                          | Audio and Vibration |
+| Battery                            |  |
 
 #### *Voice-Badge Simple*
 
@@ -86,8 +87,8 @@ These badge uses April Tags and Arduino Nicla Voice to capture audio data vibrat
 | Tech                               | Features            |
 | ---------------------------------- | ------------------- |
 | Arduino Nicla Vision / H7 + Camera | Vision              |
-| April Tag                          | MQTT Client         |
-| Battery                            | Audio and Vibration |
+| April Tag                          | Audio and Vibration |
+| Battery                            |  |
 
 #### *Regular-Badge*
 
@@ -99,6 +100,8 @@ The plain badge with an April Tag and RFID badge.
 | RFID      | Proximity detection  |
 
 ### **Database Server**
++ Data Storage
++ Receive request from user-base, start basestation service, and send back results to user-base
 #### *Influx DB*
 Influx DB stores some time series charactersistics (e.g. speakers by time, graph links by time)
 | Tech      | Features             |
