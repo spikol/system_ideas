@@ -1,118 +1,95 @@
-## Mobox System Design
+# Mobox System Design
 
-### **Bases**
+## System Diagram
 
-#### *Uber-Base (User base)*
-+ Web page user interace, controls the system.
-+ The Uber-Base will send request to dataserver and receive results from dataserver. 
-+ The Uber-Base station provides a simple visualisation of the conversational chracteristic by subscribing different topics from corresponding MQTT broker.
-+ Participants' user base could send feeback to instructor's uber-base.
+Below is a diagram that represents the different components of the system and their interactions:
 
-| Tech           | Features          |
-| -------------- | ----------------- |
-| Linux Box      | WIFI              |
-| Display        | BLE               |
-| Keyboard Mouse | Ethernet          |
-| Web Page       | Visualization     |
-|                | Graphing          |
-|                | MQTT Client       |
+![Mobox System Design](https://kroki.io/graphviz/svg/eNqlVNtu2zAMfe9XEHnaABdbdu0wZEBd79IhA9pcvIdgGGSbdYQqVkDJXYrC_z7achIls7cBfbNJHp0j6pCZzEmsl_AZHk6ARHGbSRrNwvcnUOgMYWGWYo2jRG9-cMiUiatOVWks0s_nNUqJBNVoEAqDZsBVqVaaRokqsQsy9CDzBOm0xsGTuUGChD-f7o9QMl_a9px5CIsW9R0TuBI5BvDtejaDCyWxsINaX9XB98Lji6WRumgYj1hyQiw4FO9pLsQKSbQkIelbpAAuixtVbqLwX6wvPdbzMpO6izTVJBSHzvekk0-XEXwRNoBw_PHv3JzVRa69_68iIdEr6ZUnaaxTYXtacY9K6V8cGx_Jmi4lqgye_ae-VkiXlNcHtsly3zfbl_gD9KbrIRnb7Ze4ye0u4AABNG8Bosggltysuge9DXvrE2qZouODCPma_QZy6Ucxn_UwT-VqrfpcFIcu_Sjmdx7zBPNSCers8s4kk8M-s01uSK-aSQZjG7IArkhv5Erae8jQYuop6NIw9LdKJKxoDpsi3SHtZRBmnevF3y_OkRCFnr20qnE7ry4OSjlgHE9fg4b-PmkG8OB4IxWj-Xc7mwu_9Pj4qtlrpx_ggfcObwGeuJ2OFlC5pcQ1ztFuXThI67Ttw1duZjk3aUur33L07Qg=)
 
-#### *Vision-Base*
 
-Line of sight vision base, designed for capturing the April Tags, can work with wide-angle cameras and the Owl Meeting Lab. Also 360 like cameras.
-| Tech         | Features                         |
-| ------------ | -------------------------------- |
-| Raspberry-Pi | Camera Wide angle or OWL meeting |
-|              | Wifi                             |
-|              | MQTT Broker                      |
-|              | InfluxDB Client                  |
-|              | Ethernet                         |
+The Mobox system is designed to analyze the collaboration level within a group using different modality data. The system is composed of several modules: Bases, Badges, and a Database Server. 
 
-#### *Audio-Base simple and deluxe*
+## Bases
 
-This simple base station handles the Audio tags or runs the Jabra for collecting and processing audio data from sensors and badges. 
+The Bases are responsible for data collection and processing. They include:
 
-The deluxe model captures the streams from the Voice-Badge deluxe and perform VAD and SD.
+### Uber-Base (User base)
 
-| Tech                   | Features           |
-| ---------------------- | ------------------ |
-| Nvidia Jetson (deluxe) | RFID Hat           |
-| Unix Box (deluxe)      | BLE                |
-| Raspberry-Pi (simple)  | Wifi               |
-|                        | MQTT Broker        |
-|                        | InfluxDB Client    |
-|                        | MongoDB Client     |
-|                        | Jabra              |
-|                        | Ethernet           |
+The Uber-Base is the control center of the system. It communicates with the Database Server to send requests and receive results. It also provides a simple visualization of the conversational characteristics by subscribing to different topics from the corresponding MQTT broker. 
 
-#### *Location-Base*
+- Tech: Linux Box, Display, Keyboard Mouse, Web Page
+- Features: WIFI, BLE, Ethernet, Visualization, Graphing, MQTT Client
 
-This base is designed to track location with BLE or RFID and provide proximity information. BLE logging to determine via triangulation the badges close by. Or using RFID (medium power) to capture the badges nearby.
+### Vision-Base
 
-| Tech          | Features           |
-| ------------- | ------------------ |
-| Raspberry-Pi  | RFID Shield / Hat  |
-| Arduino H7/H8 | BLE                |
-|               | Wifi               |
-|               | MQTT Broker        |
-|               | InfluxDB Client    |
-|               | Ethernet           |
+The Vision-Base is designed to capture April Tags using wide-angle cameras or the Owl Meeting Lab. 
 
-### **Badges**
+- Tech: Raspberry-Pi
+- Features: Camera Wide angle or OWL meeting, Wifi, MQTT Broker, InfluxDB Client, Ethernet
 
-#### *Vision-Badge*
+### Audio-Base
 
-This badge uses April Tags and Arduino Nicla Vision board to capture proximity location. Plus audio and vibration data.
+The Audio-Base handles the Audio tags and runs the Jabra for collecting and processing audio data from sensors and badges. 
 
-| Tech                 | Features            |
-| -------------------- | ------------------- |
-| Arduino Nicla Vision | Vision              |
-| April Tag            | Audio and Vibration |
-| Battery              |  |
+- Tech: Nvidia Jetson (deluxe), Unix Box (deluxe), Raspberry-Pi (simple)
+- Features: RFID Hat, BLE, Wifi, MQTT Broker, InfluxDB Client, MongoDB Client, Jabra, Ethernet
 
-#### *Voice-Badge Deluxe*
+### Location-Base
 
-These badge uses April Tags and Arduino H7/Camera Module to stream audio data vibration data to the Voice-Base Deluxe, so the base station can perform audio processing. 
+The Location-Base tracks location with BLE or RFID and provides proximity information. 
 
-| Tech                               | Features            |
-| ---------------------------------- | ------------------- |
-| Arduino Nicla Vision / H7 + Camera | Vision              |
-| April Tag                          | Audio and Vibration |
-| Battery                            |  |
+- Tech: Raspberry-Pi, Arduino H7/H8
+- Features: RFID Shield / Hat, BLE, Wifi, MQTT Broker, InfluxDB Client, Ethernet
 
-#### *Voice-Badge Simple*
+## Badges
 
-These badge uses April Tags and Arduino Nicla Voice to capture audio data vibration data. Keyword and simple
+The Badges are responsible for data collection. They include:
 
-| Tech                               | Features            |
-| ---------------------------------- | ------------------- |
-| Arduino Nicla Vision / H7 + Camera | Vision              |
-| April Tag                          | Audio and Vibration |
-| Battery                            |  |
+### Vision-Badge
 
-#### *Regular-Badge*
+The Vision-Badge uses April Tags and Arduino Nicla Vision board to capture proximity location, audio, and vibration data.
 
-The plain badge with an April Tag and RFID badge. 
+- Tech: Arduino Nicla Vision, April Tag, Battery
+- Features: Vision, Audio and Vibration
 
-| Tech      | Features             |
-| --------- | -------------------- |
-| April-Tag | ID from base station |
-| RFID      | Proximity detection  |
+### Voice-Badge Deluxe
 
-### **Database Server**
-+ Data Storage
-+ Receive request from user-base, start basestation service, and send back results to user-base
-#### *Influx DB*
-Influx DB stores some time series charactersistics (e.g. speakers by time, graph links by time)
-| Tech      | Features             |
-| --------- | -------------------- |
-| Linux box | InfluxDB server      |
+The Voice-Badge Deluxe uses April Tags and Arduino H7/Camera Module to stream audio data vibration data to the Voice-Base Deluxe for audio processing.
 
-#### *Mongo DB*
-Mongo DB stores text charactersistics (e.g. transcription by speaker)
-| Tech      | Features             |
-| --------- | -------------------- |
-| Linux box | MongoDB server       |
+- Tech: Arduino Nicla Vision / H7 + Camera, April Tag, Battery
+- Features: Vision, Audio and Vibration
+
+### Voice-Badge Simple
+
+The Voice-Badge Simple uses April Tags and Arduino Nicla Voice to capture audio data vibration data.
+
+- Tech: Arduino Nicla Vision / H7 + Camera, April Tag, Battery
+- Features: Vision, Audio and Vibration
+
+### Regular-Badge
+
+The Regular-Badge is a plain badge with an April Tag and RFID badge.
+
+- Tech: April-Tag, RFID
+- Features: ID from base station, Proximity detection
+
+## Database Server
+
+The Database Server is responsible for data storage. It receives requests from the user-base, starts the base station service, and sends back results to the user-base.
+
+### Influx DB
+
+Influx DB stores time series characteristics (e.g. speakers by time, graph links by time).
+
+- Tech: Linux box
+- Features: InfluxDB server
+
+### Mongo DB
+
+Mongo DB stores text characteristics (e.g. transcription by speaker).
+
+- Tech: Linux box
+- Features: MongoDB server
 
 ### **Other Devices (Inputs)**
 
@@ -133,4 +110,6 @@ Audion
 H7 Audio
 
 Base-Station Influx/Graphena
+
+
 
