@@ -17,29 +17,52 @@ The Bases are responsible for data collection and processing. They include:
 
 The Uber-Base is the control center of the system. It communicates with the Database Server to send requests and receive results. It also provides a simple visualization of the conversational characteristics by subscribing to different topics from the corresponding MQTT broker. 
 
-- Tech: Linux Box, Display, Keyboard Mouse, Web Page
-- Features: WIFI, BLE, Ethernet, Visualization, Graphing, MQTT Client
+| Tech               | Features                          |
+| ------------------ | --------------------------------- |
+| Linux Box          | WiFi                              |
+| Display            | BLE                               |
+| Keyboard Mouse     | Ethernet                          |
+| Web Page           | Visualization, Graphing, MQTT Client |
 
 ### Vision-Base
 
 The Vision-Base is designed to capture April Tags using wide-angle cameras or the Owl Meeting Lab. 
 
-- Tech: Raspberry-Pi
-- Features: Camera Wide angle or OWL meeting, Wifi, MQTT Broker, InfluxDB Client, Ethernet
+| Tech         | Features                         |
+| ------------ | -------------------------------- |
+| Raspberry-Pi | Camera Wide angle or OWL meeting |
+|              | WiFi                             |
+|              | MQTT Broker                      |
+|              | InfluxDB Client                  |
+|              | Ethernet                         |
 
 ### Audio-Base
 
 The Audio-Base handles the Audio tags and runs the Jabra for collecting and processing audio data from sensors and badges. 
 
-- Tech: Nvidia Jetson (deluxe), Unix Box (deluxe), Raspberry-Pi (simple)
-- Features: RFID Hat, BLE, Wifi, MQTT Broker, InfluxDB Client, MongoDB Client, Jabra, Ethernet
+| Tech                   | Features           |
+| ---------------------- | ------------------ |
+| Nvidia Jetson (deluxe) | RFID Hat           |
+| Unix Box (deluxe)      | BLE                |
+| Raspberry-Pi (simple)  | WiFi               |
+|                        | MQTT Broker        |
+|                        | InfluxDB Client    |
+|                        | MongoDB Client     |
+|                        | Jabra              |
+|                        | Ethernet           |
 
 ### Location-Base
 
 The Location-Base tracks location with BLE or RFID and provides proximity information. 
 
-- Tech: Raspberry-Pi, Arduino H7/H8
-- Features: RFID Shield / Hat, BLE, Wifi, MQTT Broker, InfluxDB Client, Ethernet
+| Tech          | Features           |
+| ------------- | ------------------ |
+| Raspberry-Pi  | RFID Shield / Hat  |
+| Arduino H7/H8 | BLE                |
+|               | Wifi               |
+|               | MQTT Broker        |
+|               | InfluxDB Client    |
+|               | Ethernet           |
 
 ## Badges
 
@@ -49,29 +72,40 @@ The Badges are responsible for data collection. They include:
 
 The Vision-Badge uses April Tags and Arduino Nicla Vision board to capture proximity location, audio, and vibration data.
 
-- Tech: Arduino Nicla Vision, April Tag, Battery
-- Features: Vision, Audio and Vibration
+| Tech                 | Features            |
+| -------------------- | ------------------- |
+| Arduino Nicla Vision | Vision              |
+| April Tag            | Audio and Vibration |
+| Battery              |                     |
 
 ### Voice-Badge Deluxe
 
 The Voice-Badge Deluxe uses April Tags and Arduino H7/Camera Module to stream audio data vibration data to the Voice-Base Deluxe for audio processing.
 
-- Tech: Arduino Nicla Vision / H7 + Camera, April Tag, Battery
-- Features: Vision, Audio and Vibration
+| Tech                                      | Features            |
+| ----------------------------------------- | ------------------- |
+| Arduino Nicla Vision / H7 + VisionShield  | Vision              |
+| April Tag                                 | Audio and Vibration |
+| Battery                                   |                     |
 
 ### Voice-Badge Simple
 
 The Voice-Badge Simple uses April Tags and Arduino Nicla Voice to capture audio data vibration data.
 
-- Tech: Arduino Nicla Vision / H7 + Camera, April Tag, Battery
-- Features: Vision, Audio and Vibration
+| Tech                               | Features            |
+| ---------------------------------- | ------------------- |
+| Arduino Nicla Voice                | Audio and Vibration |
+| April Tag                          |                     |
+| Battery                            |                     |
 
 ### Regular-Badge
 
 The Regular-Badge is a plain badge with an April Tag and RFID badge.
 
-- Tech: April-Tag, RFID
-- Features: ID from base station, Proximity detection
+| Tech      | Features             |
+| --------- | -------------------- |
+| April-Tag | ID from base station |
+| RFID      | Proximity detection  |
 
 ## Database Server
 
@@ -81,35 +115,37 @@ The Database Server is responsible for data storage. It receives requests from t
 
 Influx DB stores time series characteristics (e.g. speakers by time, graph links by time).
 
-- Tech: Linux box
-- Features: InfluxDB server
+| Tech      | Features             |
+| --------- | -------------------- |
+| Linux box | InfluxDB server      |
 
 ### Mongo DB
 
 Mongo DB stores text characteristics (e.g. transcription by speaker).
 
-- Tech: Linux box
-- Features: MongoDB server
+| Tech      | Features             |
+| --------- | -------------------- |
+| Linux box | MongoDB server       |
 
 ### **Other Devices (Inputs)**
 
 ##### *Voice Device | Jabra*
 
-Group work VAD and SD
++ Group work VAD and SD
 
 ##### *Owl Lab Meeting*
 
-360 Video
++ 360 Video
 
-Audion
++ Audion
 
 
 
 ### **LOOK at TRELLO**
 
-H7 Audio
++ H7 Audio
 
-Base-Station Influx/Graphena
++ Base-Station Influx/Graphena
 
 
 
