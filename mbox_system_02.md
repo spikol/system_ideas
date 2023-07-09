@@ -19,7 +19,7 @@ The Uber-Base is the control center of the system. It communicates with the Data
 
 | Tech               | Features                          |
 | ------------------ | --------------------------------- |
-| Linux Box          | WiFi                              |
+| Linux Box          | Wi-Fi                             |
 | Display            | BLE                               |
 | Keyboard Mouse     | Ethernet                          |
 | Web Page           | Visualization, Graphing, MQTT Client |
@@ -31,7 +31,7 @@ The Vision-Base is designed to capture April Tags using wide-angle cameras or th
 | Tech         | Features                         |
 | ------------ | -------------------------------- |
 | Raspberry-Pi | Camera Wide angle or OWL meeting |
-|              | WiFi                             |
+|              | Wi-Fi                            |
 |              | MQTT Broker                      |
 |              | InfluxDB Client                  |
 |              | Ethernet                         |
@@ -44,7 +44,7 @@ The Audio-Base handles the Audio tags and runs the Jabra for collecting and proc
 | ---------------------- | ------------------ |
 | Nvidia Jetson (deluxe) | RFID Hat           |
 | Unix Box (deluxe)      | BLE                |
-| Raspberry-Pi (simple)  | WiFi               |
+| Raspberry-Pi (simple)  | Wi-Fi              |
 |                        | MQTT Broker        |
 |                        | InfluxDB Client    |
 |                        | MongoDB Client     |
@@ -59,7 +59,7 @@ The Location-Base tracks location with BLE or RFID and provides proximity inform
 | ------------- | ------------------ |
 | Raspberry-Pi  | RFID Shield / Hat  |
 | Arduino H7/H8 | BLE                |
-|               | Wifi               |
+|               | Wi-Fi              |
 |               | MQTT Broker        |
 |               | InfluxDB Client    |
 |               | Ethernet           |
