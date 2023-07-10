@@ -15,14 +15,14 @@ The Bases are responsible for data collection and processing. They include:
 
 ### Uber-Base (Frontend)
 
-The Uber-Base is the control center of the system. It communicates with the Database Server to send requests and receive results. It also provides a simple visualization of the conversational characteristics by subscribing to different topics from the corresponding MQTT broker. 
+The Uber-Base is the control center of the system. It communicates with the Flask Server to send requests and receive results. It also provides a real-time visualization of the conversational characteristics by subscribing to different topics from the corresponding MQTT broker, and a post-time visualization of the whole session.
 
 | Tech               | Features                          |
 | ------------------ | --------------------------------- |
-| Linux Box          | Wi-Fi                             |
-| Display            | BLE                               |
-| Keyboard Mouse     | Ethernet                          |
-| Web Page           | Visualization, Graphing, MQTT Client |
+| Web Pages          | Wi-Fi                             |
+|                    | BLE                               |
+|                    | Ethernet                          |
+|                    | Visualization, Graphing, MQTT Client |
 
 ### Vision-Base
 
@@ -109,7 +109,7 @@ The Regular-Badge is a plain badge with an April Tag and RFID badge.
 
 ## Database Server (Backend)
 
-The Database Server is responsible for data storage. It receives requests from the user-base, starts the base station service, and sends back results to the user-base.
+The Database Server is responsible for data storage. It receives requests from the user-base, and sends back results to the user-base.
 
 ### Influx DB
 
@@ -118,6 +118,7 @@ Influx DB stores time series characteristics (e.g. speakers by time, graph links
 | Tech      | Features             |
 | --------- | -------------------- |
 | Linux box | InfluxDB server      |
+|           | Flask server         |
 
 ### Mongo DB
 
