@@ -13,7 +13,7 @@ The Mobox system is designed to analyze the collaboration level within a group u
 
 The Bases are responsible for data collection and processing. They include:
 
-### Uber-Base (User base)
+### Uber-Base (Frontend)
 
 The Uber-Base is the control center of the system. It communicates with the Database Server to send requests and receive results. It also provides a simple visualization of the conversational characteristics by subscribing to different topics from the corresponding MQTT broker. 
 
@@ -38,7 +38,7 @@ The Vision-Base is designed to capture April Tags using wide-angle cameras or th
 
 ### Audio-Base
 
-The Audio-Base handles the Audio tags and runs the Jabra for collecting and processing audio data from sensors and badges. 
+The Audio-Base handles the Audio tags and processes audio data collected from jabra, sensors and badges. 
 
 | Tech                   | Features           |
 | ---------------------- | ------------------ |
@@ -107,7 +107,7 @@ The Regular-Badge is a plain badge with an April Tag and RFID badge.
 | April-Tag | ID from base station |
 | RFID      | Proximity detection  |
 
-## Database Server
+## Database Server (Backend)
 
 The Database Server is responsible for data storage. It receives requests from the user-base, starts the base station service, and sends back results to the user-base.
 
