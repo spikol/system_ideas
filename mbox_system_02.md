@@ -4,7 +4,7 @@
 
 Below is a diagram that represents the different components of the system and their interactions:
 
-![Mobox System Design](https://kroki.io/graphviz/svg/eNqlVNtu2zAMfe9XEHnaABdbdu0wZEBd79IhA9pcvIdgGGSbdYQqVkDJXYrC_z7achIls7cBfbNJHp0j6pCZzEmsl_AZHk6ARHGbSRrNwvcnUOgMYWGWYo2jRG9-cMiUiatOVWks0s_nNUqJBNVoEAqDZsBVqVaaRokqsQsy9CDzBOm0xsGTuUGChD-f7o9QMl_a9px5CIsW9R0TuBI5BvDtejaDCyWxsINaX9XB98Lji6WRumgYj1hyQiw4FO9pLsQKSbQkIelbpAAuixtVbqLwX6wvPdbzMpO6izTVJBSHzvekk0-XEXwRNoBw_PHv3JzVRa69_68iIdEr6ZUnaaxTYXtacY9K6V8cGx_Jmi4lqgye_ae-VkiXlNcHtsly3zfbl_gD9KbrIRnb7Ze4ye0u4AABNG8Bosggltysuge9DXvrE2qZouODCPma_QZy6Ucxn_UwT-VqrfpcFIcu_Sjmdx7zBPNSCers8s4kk8M-s01uSK-aSQZjG7IArkhv5Erae8jQYuop6NIw9LdKJKxoDpsi3SHtZRBmnevF3y_OkRCFnr20qnE7ry4OSjlgHE9fg4b-PmkG8OB4IxWj-Xc7mwu_9Pj4qtlrpx_ggfcObwGeuJ2OFlC5pcQ1ztFuXThI67Ttw1duZjk3aUur33L07Qg=)
+![Mobox System Design](https://kroki.io/graphviz/svg/eNqFkUFrhDAQhe_7K8LeF9peiwVF6EUvWr0spSRmcMOmxk5MWSj735s0bqKs0NuY9-W9F4eLHul4Iq_kZ0eQDmcuMHnLnndkUBzIUZ_oCAlTl3d7pA3zdCeNngA_HtwtSRnIZJ9RDXpvqU5JhQmTBuxHQ46z3jDAg4P2zqoN563QQg1RSYOSGi5UFIogFKqj0-rSdaPc46oc75ftegQYXI3svoclfcUsj6ISHXiN5CDN5YbUm0gtPkfpkSomVNAbSXERsVX7aVE7pxNl9o2kBvwGjP0RuJ3zmO5IUk8K6WxdRq0UHSptHWxBfcttyOFlaVDDwDWp4MuAnjxlVcs0d4g2ckUsolIp3W5A_zUOeeW_Tp5ow5SGqfBrmlW3lFl2P38eq2wmr7-mn911)
 
 
 The Mobox system is designed to analyze the collaboration level within a group using different modality data. The system is composed of several modules: Bases, Badges, and a Database Server. 
@@ -30,12 +30,12 @@ The Vision-Base is designed to capture April Tags using wide-angle cameras or th
 
 | Tech         | Features                         |
 | ------------ | -------------------------------- |
-| Raspberry-Pi | Camera Wide angle or OWL meeting |
-|              | Wi-Fi                            |
+| Raspberry-Pi | Flask Server                     |
+| Camera Wide angle or OWL meeting | Wi-Fi        |
 |              | MQTT Broker                      |
 |              | InfluxDB Client                  |
 |              | Ethernet                         |
-|              | Flask Server                     |
+|              
 
 ### Audio-Base
 
