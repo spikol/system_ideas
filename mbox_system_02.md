@@ -15,14 +15,14 @@ The Bases are responsible for data collection and processing. They include:
 
 ### Uber-Base (Frontend)
 
-The Uber-Base is the control center of the system. It communicates with the Flask Server to send requests and receive results. It also provides a real-time visualization of the conversational characteristics by subscribing to different topics from the corresponding MQTT broker, and a post-time visualization of the whole session.
+The Uber-Base is the dashboard of the system. It communicates with the Data Server to send requests and receive results. It also provides a real-time visualization of the conversational characteristics by subscribing to different topics from the corresponding MQTT broker, and a post-time visualization of the whole session.
 
 | Tech               | Features                          |
 | ------------------ | --------------------------------- |
-| Web Pages          | Wi-Fi                             |
-|                    | BLE                               |
-|                    | Ethernet                          |
-|                    | Visualization, Graphing, MQTT Client |
+| Web Browser        | Wi-Fi                             |
+|                    | Graphing                          |
+|                    | MQTT Clinet                       |
+|                    | Visualization                     |
 
 ### Vision-Base
 
@@ -35,6 +35,7 @@ The Vision-Base is designed to capture April Tags using wide-angle cameras or th
 |              | MQTT Broker                      |
 |              | InfluxDB Client                  |
 |              | Ethernet                         |
+|              | Flask Server                     |
 
 ### Audio-Base
 
@@ -50,6 +51,7 @@ The Audio-Base handles the Audio tags and processes audio data collected from ja
 |                        | MongoDB Client     |
 |                        | Jabra              |
 |                        | Ethernet           |
+|                        | Flask Server       |
 
 ### Location-Base
 
@@ -63,6 +65,7 @@ The Location-Base tracks location with BLE or RFID and provides proximity inform
 |               | MQTT Broker        |
 |               | InfluxDB Client    |
 |               | Ethernet           |
+|               | Flask Server       |
 
 ## Badges
 
@@ -109,24 +112,15 @@ The Regular-Badge is a plain badge with an April Tag and RFID badge.
 
 ## Database Server (Backend)
 
-The Database Server is responsible for data storage. It receives requests from the user-base, and sends back results to the user-base.
-
-### Influx DB
-
-Influx DB stores time series characteristics (e.g. speakers by time, graph links by time).
+The Database Server is responsible for data storage and API endpoints. It receives requests from the user-base, triggers basestation's service, and sends back results to the user-base.
++ Influx DB stores time series characteristics (e.g. speakers by time, graph links by time).
++ Mongo DB stores text characteristics (e.g. transcription by speaker).
 
 | Tech      | Features             |
 | --------- | -------------------- |
 | Linux box | InfluxDB server      |
+|           | MongoDB server       |
 |           | Flask server         |
-
-### Mongo DB
-
-Mongo DB stores text characteristics (e.g. transcription by speaker).
-
-| Tech      | Features             |
-| --------- | -------------------- |
-| Linux box | MongoDB server       |
 
 ### **Other Devices (Inputs)**
 
