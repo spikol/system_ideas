@@ -4,16 +4,12 @@
 
 Below is a diagram that represents the different components of the system and their interactions:
 
-![Mobox System Design](https://kroki.io/graphviz/svg/eNqFkUFrhDAQhe_7K8LeF9peiwVF6EUvWr0spSRmcMOmxk5MWSj735s0bqKs0NuY9-W9F4eLHul4Iq_kZ0eQDmcuMHnLnndkUBzIUZ_oCAlTl3d7pA3zdCeNngA_HtwtSRnIZJ9RDXpvqU5JhQmTBuxHQ46z3jDAg4P2zqoN563QQg1RSYOSGi5UFIogFKqj0-rSdaPc46oc75ftegQYXI3svoclfcUsj6ISHXiN5CDN5YbUm0gtPkfpkSomVNAbSXERsVX7aVE7pxNl9o2kBvwGjP0RuJ3zmO5IUk8K6WxdRq0UHSptHWxBfcttyOFlaVDDwDWp4MuAnjxlVcs0d4g2ckUsolIp3W5A_zUOeeW_Tp5ow5SGqfBrmlW3lFl2P38eq2wmr7-mn911)
+![Mobox System Design](https://kroki.io/graphviz/svg/eNptUcFqhDAQve9XBE-7h4W212JBK_SiF0UvSymJGdzQ1NiJKQvFf2-iNirryTHvzXtvZrhokHZX8kZ-DwRp-8kFhmn-fCCt4kAu-ko7CJm6vdunklwkZSDDoGSA55hqIMdXKaDtT4EjaMMmuVoa3QN-PDjZuSehPWWupQD8ASTH6XsKbGOtpMIQgds6KbyNayFFr5A2MBpkC5aJGpW2EqIGPYLDToDHVQCXVy9uTBqwP5VXrIQWqh3HGvUij0SGC7UAqQdSVdN-07QX4mkTgjfrFA0CtC5GfJ-Dz1NXcbKAys47YSQBaW7_lGKXUoivTk6UfHHIoTGS4spicNc9v6yXX0DLNcnh24Dupw1b1HLKO4o2csNYnSmS0u0I9Hh2f6ts5FW-inyVTsuYUTf6DLsR5zKPZ-bwB-M72Mg=)
 
 
-The Mobox system is designed to analyze the collaboration level within a group using different modality data. The system is composed of several modules: Bases, Badges, and a Database Server. 
+The Mobox system is designed to analyze the collaboration level within a group using different modality data. The system is composed of several modules: User client, Bases, Badges, and a Database Server. 
 
-## Bases
-
-The Bases are responsible for data collection and processing. They include:
-
-### Uber-Base (Frontend)
+## Uber-Base (Frontend)
 
 The Uber-Base is the dashboard of the system. It communicates with the Data Server to send requests and receive results. It also provides a real-time visualization of the conversational characteristics by subscribing to different topics from the corresponding MQTT broker, and a post-time visualization of the whole session.
 
@@ -23,6 +19,10 @@ The Uber-Base is the dashboard of the system. It communicates with the Data Serv
 |                    | Graphing                          |
 |                    | MQTT Clinet                       |
 |                    | Visualization                     |
+
+## Bases
+
+The Bases are responsible for data collection and processing. They include:
 
 ### Vision-Base
 
