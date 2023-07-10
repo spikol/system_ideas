@@ -30,12 +30,14 @@ The Vision-Base is designed to capture April Tags using wide-angle cameras or th
 
 | Tech         | Features                         |
 | ------------ | -------------------------------- |
-| Raspberry-Pi | Flask Server                     |
-| Camera Wide angle or OWL meeting | Wi-Fi        |
-|              | MQTT Broker                      |
+| Raspberry-Pi | Wi-Fi                            |
+| Camera Wide angle or OWL meeting | MQTT Broker  |
 |              | InfluxDB Client                  |
 |              | Ethernet                         |
-|              
+|              | Flask Server                     |
+
+
+
 
 ### Audio-Base
 
