@@ -17,7 +17,7 @@ The Uber-Client is the dashboard of the system. It communicates with the Data Se
 | ------------------ | --------------------------------- |
 | Web Browser        | Wi-Fi                             |
 |                    | Graphing                          |
-|                    | MQTT Clinet                       |
+|                    | MQTT Client                       |
 |                    | Visualization                     |
 
 ## Database Server (Backend)
