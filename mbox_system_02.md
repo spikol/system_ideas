@@ -17,7 +17,7 @@ The Uber-Client is the dashboard of the system. It communicates with the Data Se
 | ------------------ | --------------------------------- |
 | Web Browser        | Wi-Fi                             |
 |                    | Graphing                          |
-|                    | MQTT Client                       |
+|                    | MQTT / Redis Client                       |
 |                    | Visualization                     |
 
 ## Database Server (Backend)
@@ -43,7 +43,7 @@ The Vision-Base is designed to capture April Tags using wide-angle cameras or th
 | Tech         | Features                         |
 | ------------ | -------------------------------- |
 | Raspberry-Pi | Wi-Fi                            |
-| Camera Wide angle or OWL meeting | MQTT Broker  |
+| Camera Wide angle or OWL meeting | MQTT / Redis Broker  |
 |              | InfluxDB Client                  |
 |              | Ethernet                         |
 |              | Flask Server                     |
@@ -60,7 +60,7 @@ The Audio-Base handles the Audio tags and processes audio data collected from ja
 | Nvidia Jetson (deluxe) | RFID Hat           |
 | Unix Box (deluxe)      | BLE                |
 | Raspberry-Pi (simple)  | Wi-Fi              |
-|                        | MQTT Broker        |
+|                        | MQTT / Redis Broker        |
 |                        | InfluxDB Client    |
 |                        | MongoDB Client     |
 |                        | Jabra              |
@@ -76,7 +76,7 @@ The Location-Base tracks location with BLE or RFID and provides proximity inform
 | Raspberry-Pi  | RFID Shield / Hat  |
 | Arduino H7/H8 | BLE                |
 |               | Wi-Fi              |
-|               | MQTT Broker        |
+|               | MQTT / Redis Broker        |
 |               | InfluxDB Client    |
 |               | Ethernet           |
 |               | Flask Server       |
