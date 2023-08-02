@@ -4,7 +4,7 @@
 
 Below is a diagram that represents the different components of the system and their interactions:
 
-![Mobox System Design](https://kroki.io/graphviz/svg/eNptUcFqhDAQve9XBE-7h4W212JBK_SiF0UvSymJGdzQ1NiJKQvFf2-iNirryTHvzXtvZrhokHZX8kZ-DwRp-8kFhmn-fCCt4kAu-ko7CJm6vdunklwkZSDDoGSA55hqIMdXKaDtT4EjaMMmuVoa3QN-PDjZuSehPWWupQD8ASTH6XsKbGOtpMIQgds6KbyNayFFr5A2MBpkC5aJGpW2EqIGPYLDToDHVQCXVy9uTBqwP5VXrIQWqh3HGvUij0SGC7UAqQdSVdN-07QX4mkTgjfrFA0CtC5GfJ-Dz1NXcbKAys47YSQBaW7_lGKXUoivTk6UfHHIoTGS4spicNc9v6yXX0DLNcnh24Dupw1b1HLKO4o2csNYnSmS0u0I9Hh2f6ts5FW-inyVTsuYUTf6DLsR5zKPZ-bwB-M72Mg=)
+![Mobox System Design](system_design.svg)
 
 
 The Mobox system is designed to analyze the collaboration level within a group using different modality data. The system is composed of several modules: User Client, Bases, Badges, and a Database Server. 
@@ -29,6 +29,7 @@ The Database Server is responsible for data storage and API endpoints. It receiv
 + MQTT broker stores data received from publisher (MCUs, badges) and sends them to subscriber (bases, uber-client)
 + Redis broker stores data received from publisher (bases) and sends them to subscriber (base, uber-client)
 + Flask server implements different API endpoints that receives request from uber-client and response to it
+
 | Tech      | Features             |
 | --------- | -------------------- |
 | Linux box | InfluxDB server      |
