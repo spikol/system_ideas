@@ -7,7 +7,7 @@ Below is a diagram that represents the different components of the system and th
 ![Mobox System Design](system_design.svg)
 
 
-The Mobox system is designed to analyze the collaboration level within a group using different modality data. The system is composed of several modules: User Client, Bases, Badges, and a Database Server. 
+The Mobox system is designed to analyze the collaboration level within a group using different modality data. The system is composed of several modules: User Client, Uber server, Bases and Badges. 
 
 ## Uber Client (Frontend)
 
